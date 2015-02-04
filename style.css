@@ -8,6 +8,8 @@ body {
 	font-size: 300%;
 	height: 100%;
 	margin: 0;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
 .text {
