@@ -5,18 +5,28 @@ html {
 
 body {
 	font-family: 'Merriweather', serif;
-	font-size: 300%;
 	height: 100%;
 	margin: 0;
 	padding-left: 15%;
 	padding-right: 15%;
 }
 
-.text {
+#big-text {
+	text-align: center;
+	font-size: 300%;
+	position: relative;
+	top: 33%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#small-text {
+	text-align: center;
+	font-size: 200%;
 	position: relative;
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
-	text-align: center;
 }

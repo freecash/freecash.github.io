@@ -9,15 +9,39 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 
 		<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-
-		<script type="text/javascript" src="js.js">
-		</script>
 	</head>
 
 	<body>
-		<div class="text">
-			<span id="timer">
-			</span>
+		<div id="big-text">
+			<script type="text/javascript">
+				var count1 = 1;
+				setInterval(timer1, 1000);
+				function timer1() {
+					document.getElementById("big-text").innerHTML = "Waste some valuable time on nothing." + "<br />" + count1;
+					count1 = count1 + 1;
+				}
+				timer1();
+			</script>
+		</div>
+		
+		<div id="small-text">
+			<script type="text/javascript">
+				function getCount2() {
+					count2 = alert(document.cookie).slice(8);
+					return count2;
+				}
+				function setCount2(count2) {
+					document.cookie = "seconds=" + count2;
+				}
+				setCount2(getCount2());
+				setInterval(timer2, 1000);
+				function timer2() {
+					document.getElementById("small-text").innerHTML = "Total seconds wasted:" + "<br />" + getCount2();
+					count2 = getCount2() + 1;
+					setCount2(count2);
+				}
+				timer2();
+			</script>
 		</div>
 	</body>
 </html>
